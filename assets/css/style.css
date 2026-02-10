@@ -1,0 +1,390 @@
+/* ============================================
+   MODERN ELEGANT DESIGN SYSTEM - KASIR AZIZ
+   ============================================ */
+
+:root {
+    --primary: #1e3a8a;
+    --primary-dark: #1e40af;
+    --secondary: #64748b;
+    --accent: #d4af37;
+    --success: #059669;
+    --warning: #b45309;
+    --danger: #b91c1c;
+    --dark: #0f172a;
+    --light: #f1f5f9;
+    --border-color: #cbd5e1;
+    --text-muted: #475569;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
+    --radius: 8px;
+}
+
+* {
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f5 100%);
+    min-height: 100vh;
+    color: var(--dark);
+}
+
+/* ============================================
+   CARD & PANELS
+   ============================================ */
+
+.card {
+    border: none;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-md);
+    background: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border: none;
+    color: white;
+    font-weight: 800;
+    padding: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-size: 0.95rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: left 0.4s ease;
+}
+
+.card-header:hover::before {
+    left: 100%;
+}
+
+.card-body {
+    padding: 1.5rem;
+    background: #ffffff;
+}
+
+.card-title {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.card-text {
+    color: var(--text-muted);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* ============================================
+   TABLE STYLING
+   ============================================ */
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+}
+
+.table thead {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-size: 0.85rem;
+}
+
+.table thead th {
+    padding: 1.25rem;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: linear-gradient(90deg, rgba(30, 58, 138, 0.05), transparent);
+    box-shadow: inset 4px 0 12px rgba(30, 58, 138, 0.08);
+}
+
+.table tbody td {
+    padding: 1rem 1.25rem;
+    color: var(--dark);
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   BUTTON STYLING
+   ============================================ */
+
+.btn {
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+}
+
+.btn-primary:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--success), #38a169);
+    color: white;
+}
+
+.btn-success:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--warning), #d69e2e);
+    color: white;
+}
+
+.btn-warning:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--danger), #e53e3e);
+    color: white;
+}
+
+.btn-danger:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    color: white;
+}
+
+/* ============================================
+   FORM ELEMENTS
+   ============================================ */
+
+.form-control, .form-select {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: #ffffff;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+    background: white;
+    color: var(--dark);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    font-size: 0.85rem;
+}
+
+/* ============================================
+   BADGE STYLING
+   ============================================ */
+
+.badge {
+    border-radius: 50px;
+    padding: 0.55rem 1.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.badge-primary {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    color: white;
+}
+
+.badge-success {
+    background: linear-gradient(135deg, var(--success), #38a169);
+    color: white;
+}
+
+.badge-danger {
+    background: linear-gradient(135deg, var(--danger), #e53e3e);
+    color: white;
+}
+
+.badge-warning {
+    background: linear-gradient(135deg, var(--warning), #d69e2e);
+    color: white;
+}
+
+/* ============================================
+   PRODUCT ITEM STYLING
+   ============================================ */
+
+.produk-item {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #ffffff;
+    box-shadow: var(--shadow-sm);
+}
+
+.produk-item:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+    background: #ffffff;
+}
+
+/* ============================================
+   SHOPPING CART STYLING
+   ============================================ */
+
+.keranjang-box {
+    position: sticky;
+    top: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+}
+
+/* ============================================
+   REPORT STYLING
+   ============================================ */
+
+.card-report {
+    border: none;
+    border-radius: var(--radius);
+    background: #ffffff;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+/* ============================================
+   PRINT MEDIA QUERIES
+   ============================================ */
+
+@media print {
+    .sidebar, .navbar, .btn-print, .no-print {
+        display: none !important;
+    }
+    
+    .container-fluid, .d-flex {
+        display: block !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .card {
+        width: 100% !important;
+        margin: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+    .card-body {
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 0.65rem 1.25rem;
+        font-size: 0.85rem;
+    }
+
+    .table tbody td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
